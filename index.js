@@ -106,7 +106,7 @@ const checkFlag = () => {
         return false;
     }
 
-    if (flag.substring(41, 45) % 191 == 0 && flag.substring(41, 45) % 7 == 0) {
+    if (flag.substring(41, 45) % 191 != 0 || flag.substring(41, 45) % 7 != 0) {
         wrongFlag.classList.toggle("flag_status");
         setTimeout(() => wrongFlag.classList.toggle("flag_status"), 4000);
         return false;
